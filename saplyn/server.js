@@ -10,8 +10,9 @@ app.get('/', function(req, res) {
 });
 
 app.use('/js', express.static(__dirname + '/client/js'));
-app.use('/bower', express.static(__dirname + '/bower_components'));
+app.use('/node', express.static(__dirname + '/node_modules'));
 
 app.listen(port, function() {
     console.log('Express is listening');
+    console.log('trying to pull angular from ' + __dirname + '/node_modules')
 });
