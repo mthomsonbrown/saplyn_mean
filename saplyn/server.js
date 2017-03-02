@@ -30,3 +30,8 @@ db.once('open', function() {
     console.log('We\'re connected!');
 });
 
+// Root Route ~~!~~~!~~!~~~!~~!~~~!~~!~~~!~~!~~~!~~!~~~!~~!~~~!~~!~~~!~~!~~~!~~!
+// This should be defined in the routes file probably.  
+app.get('/', function(req, res) {
+    res.sendFile(__dirname + '/client/views/index.html');
+});

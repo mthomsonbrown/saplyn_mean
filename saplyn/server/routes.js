@@ -3,11 +3,7 @@
 var Todo = require('./models/todoModel');
 
 module.exports = function(app) {
-
-    // Routes
-    app.get('/', function(req, res) {
-        res.sendFile(__dirname + '/client/views/index.html');
-    });
+    
 
     // get all todos
     app.get('/api/todos', function(req, res) {
